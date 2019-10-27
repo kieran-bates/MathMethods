@@ -1,12 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Kieran Bates
+ * October 27, 2019
+ * This program allows a user to perform various calculations by using the default Java math methods
  */
 
 /**
  *
- * @author davidbates
+ * @author Kieran Bates
  */
 public class MathMethodsGUI extends javax.swing.JFrame {
 
@@ -294,10 +294,11 @@ public class MathMethodsGUI extends javax.swing.JFrame {
                     .addComponent(powerOfOutput)
                     .addComponent(squareRootOutput))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
-                    .addComponent(hypotenuseField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hypotenuseField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inRadiansField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(hypotenuseField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(hypotenuseField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inRadiansField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(hypotenuseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -328,21 +329,24 @@ public class MathMethodsGUI extends javax.swing.JFrame {
 
     private void largestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_largestButtonActionPerformed
         
-        double one = Double.parseDouble(largestField1.getText());
-        double two = Double.parseDouble(largestField2.getText());
+        //Math class calculation for choosing largest number
+        double one = Double.parseDouble(largestField1.getText()); //Store number in field 1
+        double two = Double.parseDouble(largestField2.getText()); //Store number in field 2
         
-        largestOutput.setText(String.valueOf(Math.max(one, two)));
+        largestOutput.setText(String.valueOf(Math.max(one, two))); //Perform calculation and display output
 
     }//GEN-LAST:event_largestButtonActionPerformed
 
     private void roundedDownButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundedDownButtonActionPerformed
         
+        //Math class calculation for rounding down to nearest whole
         roundedDownOutput.setText(String.valueOf(Math.floor(Double.parseDouble(roundedDownField.getText()))));
         
     }//GEN-LAST:event_roundedDownButtonActionPerformed
 
     private void squareRootButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_squareRootButtonActionPerformed
         
+        //Math class calculation for square root
         squareRootOutput.setText(String.valueOf(Math.sqrt(Double.parseDouble(squareRootField.getText()))));
         
     }//GEN-LAST:event_squareRootButtonActionPerformed
@@ -357,39 +361,44 @@ public class MathMethodsGUI extends javax.swing.JFrame {
 
     private void smallestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_smallestButtonActionPerformed
         
-        double one = Double.parseDouble(smallestField1.getText());
-        double two = Double.parseDouble(smallestField2.getText());
+        //Math class calculation for choosing smallest number
+        double one = Double.parseDouble(smallestField1.getText()); //Store number in field 1
+        double two = Double.parseDouble(smallestField2.getText()); //Store number in field 2
         
-        smallestOutput.setText(String.valueOf(Math.min(one, two)));
+        smallestOutput.setText(String.valueOf(Math.min(one, two))); //Perform calculation and display output
         
     }//GEN-LAST:event_smallestButtonActionPerformed
 
     private void powerOfButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerOfButtonActionPerformed
         
-        double one = Double.parseDouble(powerOfField1.getText());
-        double two = Double.parseDouble(powerOfField2.getText());
+        //Math class calculation for powers
+        double one = Double.parseDouble(powerOfField1.getText()); //Store number in field 1
+        double two = Double.parseDouble(powerOfField2.getText()); //Store number in field 2
         
-        powerOfOutput.setText(String.valueOf(Math.pow(one, two)));
+        powerOfOutput.setText(String.valueOf(Math.pow(one, two))); //Perfrom calculation and display output
         
     }//GEN-LAST:event_powerOfButtonActionPerformed
 
     private void hypotenuseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hypotenuseButtonActionPerformed
         
-        double one = Double.parseDouble(hypotenuseField1.getText());
-        double two = Double.parseDouble(hypotenuseField2.getText());
+        //Math class calculation for hypotenuse
+        double one = Double.parseDouble(hypotenuseField1.getText()); //Store number in field 1
+        double two = Double.parseDouble(hypotenuseField2.getText()); //Store number in field 2
         
-        hypotenuseOutput.setText(String.valueOf(Math.hypot(one, two)));
+        hypotenuseOutput.setText(String.valueOf(Math.hypot(one, two))); //Perform calculation and display output
         
     }//GEN-LAST:event_hypotenuseButtonActionPerformed
 
     private void inRadiansButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inRadiansButtonActionPerformed
         
+        //Math class calculation for converting to radians
         inRadiansOutput.setText(String.valueOf(Math.toRadians(Double.parseDouble(inRadiansField.getText()))));
         
     }//GEN-LAST:event_inRadiansButtonActionPerformed
 
     private void roundedUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roundedUpButtonActionPerformed
         
+        //Math class calculation for rounding up to nearset whole
         roundedUpOutput.setText(String.valueOf(Math.ceil(Double.parseDouble(roundedUpField.getText()))));
         
     }//GEN-LAST:event_roundedUpButtonActionPerformed

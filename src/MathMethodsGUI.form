@@ -168,10 +168,12 @@
                   <Component id="squareRootOutput" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" max="-2" attributes="0">
-                  <Component id="hypotenuseField1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="hypotenuseField2" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
-                  <Component id="inRadiansField" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="hypotenuseField1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="inRadiansField" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
